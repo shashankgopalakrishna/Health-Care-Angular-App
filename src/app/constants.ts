@@ -12,6 +12,7 @@ export interface Patient {
     firstName: string;
     lastName: string;
     appointmentDate: string;
+    time: string;
     dob: string;
     sex: Sex;
     residence: string;
@@ -31,7 +32,8 @@ export const PATIENTS_DATA: Array<Patient> = [
       imgPath: './../assets/images/profile_1.jpeg', 
       firstName: 'Ashley',
       lastName: 'Citeria',
-      appointmentDate: '04/18/2024',
+      appointmentDate: '04/19/2024',
+      time: '9:00 am',
       dob: '01/02/1990',
       sex: Sex.Male,
       residence: 'Boston, MA',
@@ -50,6 +52,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'John',
       lastName: 'Doe',
       appointmentDate: '04/20/2024',
+      time: '10:00 am',
       dob: '05/15/1975',
       sex: Sex.Male,
       residence: 'New York, NY',
@@ -68,6 +71,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Alice',
       lastName: 'Smith',
       appointmentDate: '04/21/2024',
+      time: '11:00 am',
       dob: '09/28/1988',
       sex: Sex.Female,
       residence: 'Los Angeles, CA',
@@ -86,6 +90,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Michael',
       lastName: 'Johnson',
       appointmentDate: '04/22/2024',
+      time: '11:30 am',
       dob: '03/12/1980',
       sex: Sex.Male,
       residence: 'Chicago, IL',
@@ -104,6 +109,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Emily',
       lastName: 'Brown',
       appointmentDate: '04/23/2024',
+      time: '9:30 am',
       dob: '11/20/1995',
       sex: Sex.Female,
       residence: 'Houston, TX',
@@ -122,6 +128,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'William',
       lastName: 'Wilson',
       appointmentDate: '04/24/2024',
+      time: '11:45 am',
       dob: '07/04/1972',
       sex: Sex.Male,
       residence: 'Philadelphia, PA',
@@ -140,6 +147,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Olivia',
       lastName: 'Taylor',
       appointmentDate: '04/25/2024',
+      time: '1:00 pm',
       dob: '02/14/1986',
       sex: Sex.Female,
       residence: 'Phoenix, AZ',
@@ -158,6 +166,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Daniel',
       lastName: 'Davis',
       appointmentDate: '04/26/2024',
+      time: '2:00 pm',
       dob: '06/30/1992',
       sex: Sex.Male,
       residence: 'San Diego, CA',
@@ -176,6 +185,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Sophia',
       lastName: 'Martinez',
       appointmentDate: '04/27/2024',
+      time: '2:30 pm',
       dob: '08/08/1978',
       sex: Sex.Female,
       residence: 'Dallas, TX',
@@ -194,6 +204,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Liam',
       lastName: 'Anderson',
       appointmentDate: '04/28/2024',
+      time: '12:00 am',
       dob: '12/03/1983',
       sex: Sex.Male,
       residence: 'Seattle, WA',
@@ -212,6 +223,7 @@ export const PATIENTS_DATA: Array<Patient> = [
       firstName: 'Emma',
       lastName: 'White',
       appointmentDate: '04/29/2024',
+      time: '1:30 pm',
       dob: '10/25/1998',
       sex: Sex.Female,
       residence: 'Miami, FL',

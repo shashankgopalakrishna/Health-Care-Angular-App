@@ -77,75 +77,82 @@
 
       <div class="col-md-12">
         <div *ngIf="patientsData.length < 1" class="no-results d-flex justify-content-center align-items-center h-30 bg-white">
-          No results found matching the filtered criteria
+          No results found
         </div>
         <div class="card mb-3" *ngFor="let patient of patientsData">
-          <div class="card-header d-flex align-items-center">
-            <img [src]="patient.imgPath" class="mr-3" width="24px" height="24px">
-            <div>{{ patient.firstName }}&nbsp;{{ patient.lastName }}</div>
-            <div class="ml-auto pr-2">
-              <div class="d-inline">
-                Appointment: <span>{{ patient.appointmentDate }}</span>
+          <div class="card-header">
+            <div class="row">
+              <div class="col-sm-6 col-md-4 d-flex align-items-center">
+                <img [src]="patient.imgPath" class="mr-3" width="24px" height="24px">
+                <div>{{ patient.firstName }}&nbsp;{{ patient.lastName }}</div>
               </div>
-              <button type="button" class="btn d-inline ml-3">
-                <i class="fa fas fa-angle-right" style="font-size: 16px;"></i>
-              </button>
+              <div class="col-sm-6 offset-md-4 col-md-4 d-flex align-items-center">
+                <div class="ml-auto pr-2">
+                  <div class="d-inline">
+                    <Strong>Next Appointment</Strong>
+                    <span class="pl-3">Today&nbsp;{{ patient.time }}</span>
+                  </div>
+                  <button type="button" class="btn d-inline ml-3">
+                    <i class="fa fas fa-angle-right" style="font-size: 16px;"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-md-4">
-                <div class="patient-item">
-                  <span class="patient-info-type">DOB</span>
-                  <span class="patient-value">{{ patient.dob }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">DOB</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.dob }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Sex</span>
-                  <span class="patient-value">{{ patient.sex }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Sex</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.sex }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Residence</span>
-                  <span class="patient-value">{{ patient.residence }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Residence</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.residence }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">MRN</span>
-                  <span class="patient-value">{{ patient.MRN }}</span>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="patient-item">
-                  <span class="patient-info-type">ID Number</span>
-                  <span class="patient-value">{{ patient.id }}</span>
-                </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Last 4 digits of SSN</span>
-                  <span class="patient-value">{{ patient.lastDigitssn }}</span>
-                </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Phone Number</span>
-                  <span class="patient-value">{{ patient.phoneNumber }}</span>
-                </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Email Address</span>
-                  <span class="patient-value">{{ patient.emailAddress }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">MRN</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.MRN }}</span>
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="patient-item">
-                  <span class="patient-info-type">Hospital</span>
-                  <span class="patient-value">{{ patient.hospital }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">ID Number</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.id }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Dept.</span>
-                  <span class="patient-value">{{ patient.dept }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Last 4 digits of SSN</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.lastDigitssn }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Physician</span>
-                  <span class="patient-value">{{ patient.physician }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Phone Number</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.phoneNumber }}</span>
                 </div>
-                <div class="patient-item">
-                  <span class="patient-info-type">Conditions</span>
-                  <span class="patient-value">{{ patient.conditions }}</span>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Email Address</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.emailAddress }}</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Hospital</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.hospital }}</span>
+                </div>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Dept.</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.dept }}</span>
+                </div>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Physician</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.physician }}</span>
+                </div>
+                <div class="row">
+                  <span class="col-sm-6 col-md-5 py-1 font-weight-bold">Conditions</span>
+                  <span class="col-sm-6 col-md-7 py-1">{{ patient.conditions }}</span>
                 </div>
               </div>
             </div>
