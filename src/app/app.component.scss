@@ -1,0 +1,41 @@
+.main {
+    color: #324F57;
+    background-color: #FAF6F2;
+    .container-fluid {
+        padding: 24px 40px;
+    }
+    .search-block {
+        font-size: 20px;
+    }
+    .tab-content {
+        .form-row {
+            margin: 0;
+            border-bottom: 2px solid #eee;
+        }
+        .search-btn {
+            background-color: #5C8A96;
+            color: white;
+        }
+    }
+    .no-results {
+        height: 40vh;
+    }
+    .list-inline-item {
+        cursor: pointer;
+    }
+    .selected-all, .filtered-items {
+        border-bottom: 2px solid;
+    }
+    .card {
+        .patient-item {
+            display: flex;
+            padding: 8px 0px;
+        }
+        .patient-info-type {
+            width: 40% ;
+        }
+        .patient-value {
+            padding-right: 24px;
+        }
+    }
+}
