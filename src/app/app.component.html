@@ -90,7 +90,9 @@
                 <div class="ml-auto pr-2">
                   <div class="d-inline">
                     <Strong>Next Appointment</Strong>
-                    <span class="pl-3">Today&nbsp;{{ patient.time }}</span>
+                    <span class="pl-3">
+                      {{ selectedTabItem === tabOptions.Patient ? 'Today ' + patient.time : patient.appointmentDate }}
+                    </span>
                   </div>
                   <button type="button" class="btn d-inline ml-3">
                     <i class="fa fas fa-angle-right" style="font-size: 16px;"></i>
